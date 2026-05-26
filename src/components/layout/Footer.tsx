@@ -5,7 +5,7 @@ function BridgeLogo() {
     <img 
       src="/logo-symbol.png" 
       alt="FuelBridge Logo" 
-      className="h-10 w-auto object-contain" 
+      className="h-14 w-auto object-contain" 
     />
   );
 }
