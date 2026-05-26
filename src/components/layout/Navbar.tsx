@@ -13,7 +13,7 @@ export default function Navbar() {
           
           {/* 1. 로고 섹션 */}
           <Link href="/" className="flex items-center gap-3">
-        <img src="/logo-symbol.png" alt="FuelBridge Logo" className="h-12 w-auto object-contain" />
+        <img src="/logo-symbol.jpg" alt="FuelBridge Logo" className="h-12 w-auto object-contain" />
           </Link>
 
           {/* 2. 사라진 메뉴 탭 (이게 있어야 메뉴가 다시 보입니다) */}

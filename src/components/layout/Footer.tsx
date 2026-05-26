@@ -2,18 +2,13 @@ import Link from "next/link";
 
 function BridgeLogo() {
   return (
-    <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 26 Q18 8 32 26" stroke="#9FE1CB" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-      <line x1="4" y1="26" x2="32" y2="26" stroke="#9FE1CB" strokeWidth="2.5" strokeLinecap="round"/>
-      <line x1="12" y1="26" x2="12" y2="19" stroke="#4DC08A" strokeWidth="1.8" strokeLinecap="round"/>
-      <line x1="18" y1="26" x2="18" y2="15" stroke="#4DC08A" strokeWidth="1.8" strokeLinecap="round"/>
-      <line x1="24" y1="26" x2="24" y2="19" stroke="#4DC08A" strokeWidth="1.8" strokeLinecap="round"/>
-      <line x1="4" y1="26" x2="4" y2="30" stroke="#9FE1CB" strokeWidth="2.5" strokeLinecap="round"/>
-      <line x1="32" y1="26" x2="32" y2="30" stroke="#9FE1CB" strokeWidth="2.5" strokeLinecap="round"/>
-    </svg>
+    <img 
+      src="/logo-symbol.jpg" 
+      alt="FuelBridge Logo" 
+      className="h-10 w-auto object-contain" 
+    />
   );
 }
-
 const LINKS = {
   Platform:   [["Market Board","/market"],["Register","/register"],["Commission Structure","/#commission"]],
   Compliance: [["DMRE Requirements","#"],["NCNDA / IMFPA","#"],["POPIA Policy","#"],["Dispute Process","#"]],
