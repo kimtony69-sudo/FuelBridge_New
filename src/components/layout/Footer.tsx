@@ -3,7 +3,7 @@ import Link from "next/link";
 function BridgeLogo() {
   return (
     <img 
-      src="/logo-symbol.jpg" 
+      src="/logo-symbol.png" 
       alt="FuelBridge Logo" 
       className="h-10 w-auto object-contain" 
     />
