@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, IBM_Plex_Mono, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
-import Footer from "@/components/Footer"; // Footer 경로 확인 필요
+import Footer from "@/components/layout/Footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
