@@ -1,10 +1,6 @@
 export default function Home() {
   return (
     <main>
-      {/* 여기에 기존의 상단 코드들이 있을 텐데, 
-          전체 다 지우고 아래 섹션만 넣으면 일단 화면이 바뀝니다. 
-          나머지 부분은 그대로 두셔도 됩니다. */}
-
       <section className="py-16 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold text-gray-900 mb-6">
