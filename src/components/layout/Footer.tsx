@@ -1,67 +1,33 @@
-import Link from "next/link";
-
-function BridgeLogo() {
-  return (
-    <img 
-      src="/logo-symbol.png" 
-      alt="FuelBridge Logo" 
-      className="h-14 w-auto object-contain" 
-    />
-  );
-}
-const LINKS = {
-  Platform:   [["Market Board","/market"],["Register","/register"],["Commission Structure","/#commission"]],
-  Compliance: [["DMRE Requirements","#"],["NCNDA / IMFPA","#"],["POPIA Policy","#"],["Dispute Process","#"]],
-  Contact:    [["info@fuelbridge.co.za","mailto:info@fuelbridge.co.za"],["+27 10 XXX XXXX","#"],["Johannesburg, RSA","#"]],
-};
-
 export default function Footer() {
   return (
-    <footer className="bg-ink-80 text-ink-20 pt-12 pb-7">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-green-800 rounded-lg flex items-center justify-center">
-                <BridgeLogo />
-              </div>
-              <span className="font-display text-lg font-bold text-white">FuelBridge ZA</span>
-            </div>
-            <p className="text-[13px] text-ink-40 leading-relaxed">
-              South Africa&apos;s verified EN590 bulk fuel trading platform.
-              DMRE-compliant, NCNDA-protected, with transparent referral commissions.
-            </p>
-            
-            {/* 여기에 추가하신 신뢰 문구를 넣었습니다 */}
-            <div className="mt-4 text-[12px] text-ink-50">
-              <p>FuelBridge ZA (Pty) Ltd</p>
-              <p>Sandton, Johannesburg, South Africa</p>
-              <p className="font-semibold text-green-400">DMRE Wholesale Licence Verified Platform</p>
-            </div>
-          </div>
-          
-          {Object.entries(LINKS).map(([title, links]) => (
-            <div key={title}>
-              <div className="text-[12px] font-semibold text-white tracking-wide mb-4">{title}</div>
-              <div className="flex flex-col gap-2">
-                {links.map(([label, href]) => (
-                  <Link key={label} href={href}
-                    className="text-[13px] text-ink-40 hover:text-green-200 transition-colors no-underline">
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+    <footer className="bg-gray-900 text-gray-400 py-12 px-6 mt-12">
+      <div className="max-w-7xl mx-auto space-y-8">
         
-        <div className="border-t border-ink-60 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-[12px] text-ink-60">© 2026 FuelBridge ZA (Pty) Ltd. All rights reserved.</p>
-          <div className="flex gap-5">
-            {["Terms of Use","Privacy Policy","Platform Disclaimer"].map(t => (
-              <Link key={t} href="#" className="text-[12px] text-ink-60 hover:text-green-200 transition-colors no-underline">{t}</Link>
-            ))}
+        {/* 상단: 회사 정보 및 기본 정보 */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-white font-bold text-lg mb-2">FuelBridge ZA</h3>
+            <p className="text-sm">Sandton, Johannesburg, South Africa</p>
+            <p className="text-sm">Verified EN590 Bulk Diesel Trading Platform</p>
           </div>
+          <div className="md:text-right text-sm">
+            <p>© 2026 FuelBridge ZA (Pty) Ltd. All rights reserved.</p>
+          </div>
+        </div>
+
+        {/* 하단: 법적 면책 조항 (가장 중요) */}
+        <div className="border-t border-gray-800 pt-8 space-y-4 text-[11px] leading-relaxed text-gray-500">
+          <p>
+            <strong>Disclaimer:</strong> FuelBridge ZA is an independent connection platform and does not directly sell fuel or act as a broker. 
+            All trading activities, including EN590 diesel transactions, must be conducted in strict compliance with DMRE (Department of Mineral Resources and Energy) regulations.
+          </p>
+          <p>
+            Users are solely responsible for conducting their own due diligence, verification of licenses, and legal compliance checks. 
+            FuelBridge ZA provides NCNDA-protected matching services and is not liable for the outcome of any transaction or contract between parties.
+          </p>
+          <p>
+            By using this platform, you acknowledge that you are a professional trader, mining operator, or wholesale distributor acting within the legal framework of South Africa.
+          </p>
         </div>
       </div>
     </footer>
