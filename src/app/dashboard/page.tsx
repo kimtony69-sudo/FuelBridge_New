@@ -1,26 +1,16 @@
-import { redirect } from "next/navigation";
-
-// Deal Tracker is admin-only.
-// In production, replace this check with real session/auth.
-// For now: only accessible via /dashboard?admin=true
-export default function DashboardPage({
-  searchParams,
-}: {
-  searchParams: { admin?: string };
-}) {
-  // Guard: if not admin, redirect to home
-  if (searchParams.admin !== "true") {
-    redirect("/");
-  }
-
-  // Dynamically import so it's never bundled into public pages
-  return <AdminDashboard />;
-}
-
-// Inline admin view (server component safe)
-import DealTrackerWrapper from "@/components/dashboard/DealTrackerWrapper";
-function AdminDashboard() {
+// src/app/page.tsx 전체 코드
+export default function Home() {
   return (
-    <DealTrackerWrapper />
+    <main className="min-h-screen bg-white">
+      {/* 이 태그가 소스보기에 안 나오면 SEO가 안 된 것입니다 */}
+      <h1 className="sr-only">FuelBridge ZA: Verified EN590 Bulk Diesel Trading Platform in South Africa</h1>
+      
+      <section className="py-16 px-6 max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          Trusted EN590 Bulk Diesel Trading in South Africa
+        </h2>
+        {/* 이하 생략 (이전과 동일) */}
+      </section>
+    </main>
   );
 }
