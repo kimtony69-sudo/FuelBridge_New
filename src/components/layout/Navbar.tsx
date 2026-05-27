@@ -9,12 +9,14 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/92 backdrop-blur-lg border-b border-ink-10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20"> {/* 높이 h-20으로 키움 */}
-          
-          {/* 1. 로고 섹션 */}
-          <Link href="/" className="flex items-center gap-3">
-        <img src="/logo-symbol.png" alt="FuelBridge Logo" className="h-12 w-auto object-contain" />
-          </Link>
+       <div className="flex items-center gap-3">
+  <img 
+    src="/logo-symbol.png" 
+    alt="FuelBridge Logo" 
+    className="h-12 w-auto object-contain" 
+  />
+  <span className="text-xl font-bold text-white">FuelBridge ZA</span>
+</div>
 
           {/* 2. 사라진 메뉴 탭 (이게 있어야 메뉴가 다시 보입니다) */}
           <div className="flex items-center gap-8">
