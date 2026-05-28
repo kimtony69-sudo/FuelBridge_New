@@ -13,7 +13,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <HowItWorks />
-        <CommissionSection />
+        <CommissionSection /> //
         <section className="my-12 p-8 bg-gray-50 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4 text-gray-900">Why Choose FuelBridge?</h2>
           <p className="text-gray-700 leading-relaxed">
