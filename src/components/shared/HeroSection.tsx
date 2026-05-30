@@ -8,13 +8,17 @@ import type { NegoEvent } from "@/types";
 import { cn } from "@/lib/utils";
 
 const HERO_STATS = [
-  { val: "1M+",    label: "Min. transaction (litres)" },
+  { val: "1M+",   label: "Min. transaction (litres)" },
   { val: "R 0.10", label: "Commission per litre" },
   { val: "DMRE",   label: "Licensed parties only" },
   { val: "NCNDA",  label: "Legally protected intro" },
 ];
 
 function PriceNegotiationWidget() {
+  // 데이터 연동
+  const sellerData = MOCK_SELLS.find(s => s.anonymousId === "SELL-0041");
+  const buyerData = MOCK_BUYS.find(b => b.anonymousId === "BUY-0087");
+
   const [history, setHistory] = useState<NegoEvent[]>(MOCK_NEGO_HISTORY);
   const [inputPrice, setInputPrice] = useState("");
   const [showSellerResponse, setShowSellerResponse] = useState(false);
@@ -55,13 +59,15 @@ function PriceNegotiationWidget() {
           <div className="bg-red-50 border border-red-100 rounded-lg px-3 py-2.5">
             <div className="text-[10px] uppercase tracking-widest text-ink-40 mb-1">Seller Ask</div>
             <div className="font-mono text-[16px] font-bold text-red-600">
-              R {agreed && negoPrice ? negoPrice.toFixed(2) : "24.20"}
+              R {agreed && negoPrice ? negoPrice.toFixed(2) : (sellerData?.pricePerLitre.toFixed(2) || "24.20")}
             </div>
             <div className="text-[10px] text-ink-40 mt-0.5">5.0M L · CoC</div>
           </div>
           <div className="bg-green-50 border border-green-100 rounded-lg px-3 py-2.5">
             <div className="text-[10px] uppercase tracking-widest text-ink-40 mb-1">Buyer Bid</div>
-            <div className="font-mono text-[16px] font-bold text-green-700">R 23.80</div>
+            <div className="font-mono text-[16px] font-bold text-green-700">
+              R {buyerData?.pricePerLitre.toFixed(2) || "23.80"}
+            </div>
             <div className="text-[10px] text-ink-40 mt-0.5">3.0M L</div>
           </div>
         </div>
@@ -130,7 +136,6 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 items-start">
-          {/* Left */}
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 bg-green-600/15 border border-green-200/25 rounded-full px-4 py-1.5 mb-6">
               <span className="text-[12px] font-semibold tracking-widest uppercase text-green-200">
@@ -157,15 +162,13 @@ export default function HeroSection() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {HERO_STATS.map(s => (
-                <div key={s.val} className="bg-white/6 border border-white/10 rounded-lg px-4 py-3">
-                  <div className="font-mono text-[22px] font-bold text-white">{s.val}</div>
-                  <div className="text-[11px] text-ink-40 mt-1">{s.label}</div>
+                <div key={s.val} className="bg-white/6 border border-white/10 rounded-lg px-3 py-3">
+                  <div className="font-mono text-[20px] font-bold text-white">{s.val}</div>
+                  <div className="text-[10px] text-ink-40 mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Right — Price Negotiation widget */}
           <div className="hidden lg:block animate-fade-up-2 pt-4">
             <PriceNegotiationWidget />
           </div>
