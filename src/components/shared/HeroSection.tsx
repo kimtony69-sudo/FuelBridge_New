@@ -55,13 +55,13 @@ function PriceNegotiationWidget() {
           <div className="bg-red-50 border border-red-100 rounded-lg px-3 py-2.5">
             <div className="text-[10px] uppercase tracking-widest text-ink-40 mb-1">Seller Ask</div>
             <div className="font-mono text-[16px] font-bold text-red-600">
-              R {agreed && negoPrice ? negoPrice.toFixed(2) : "23.20"}
+              R {agreed && negoPrice ? negoPrice.toFixed(2) : "24.20"}
             </div>
             <div className="text-[10px] text-ink-40 mt-0.5">5.0M L · CoC</div>
           </div>
           <div className="bg-green-50 border border-green-100 rounded-lg px-3 py-2.5">
             <div className="text-[10px] uppercase tracking-widest text-ink-40 mb-1">Buyer Bid</div>
-            <div className="font-mono text-[16px] font-bold text-green-700">R 22.80</div>
+            <div className="font-mono text-[16px] font-bold text-green-700">R 23.80</div>
             <div className="text-[10px] text-ink-40 mt-0.5">3.0M L</div>
           </div>
         </div>
