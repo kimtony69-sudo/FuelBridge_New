@@ -5,7 +5,7 @@ export const MOCK_SELLS: SellListing[] = [
   {
     id: "SELL-0041", anonymousId: "SELL-0041",
     region: "KwaZulu-Natal", storageType: "Vopak",
-    volumeLitres: 5_000_000, minVolumeLitres: 1_000_000,
+    volumeLitres: 50_000_000, minVolumeLitres: 10_000_000,
     pricePerLitre: 24.20, dealPeriod: "Spot (immediate)",
     dealMethod: "CoC",
     status: "verified", hasVopakCode: true, hasDipTest: true,
@@ -14,7 +14,7 @@ export const MOCK_SELLS: SellListing[] = [
   {
     id: "SELL-0038", anonymousId: "SELL-0038",
     region: "Gauteng", storageType: "Own Depot",
-    volumeLitres: 1_500_000, minVolumeLitres: 1_000_000,
+    volumeLitres: 15_000_000, minVolumeLitres: 1_000_000,
     pricePerLitre: 24.35, dealPeriod: "Spot (immediate)",
     dealMethod: "In-Tank Transfer",
     status: "verified", hasVopakCode: false, hasDipTest: true,
@@ -23,7 +23,7 @@ export const MOCK_SELLS: SellListing[] = [
   {
     id: "SELL-0035", anonymousId: "SELL-0035",
     region: "Western Cape", storageType: "Vopak",
-    volumeLitres: 2_000_000, minVolumeLitres: 1_000_000,
+    volumeLitres: 5_000_000, minVolumeLitres: 1_000_000,
     pricePerLitre: 24.50, dealPeriod: "Within 30 days",
     dealMethod: "CoC",
     status: "verified", hasVopakCode: true, hasDipTest: true,
@@ -32,7 +32,7 @@ export const MOCK_SELLS: SellListing[] = [
   {
     id: "SELL-0029", anonymousId: "SELL-0029",
     region: "Eastern Cape", storageType: "Third-party Depot",
-    volumeLitres: 3_000_000, minVolumeLitres: 1_000_000,
+    volumeLitres: 20_000_000, minVolumeLitres: 5_000_000,
     pricePerLitre: 24.65, dealPeriod: "Within 30 days",
     dealMethod: "In-Tank Transfer",
     status: "verified", hasVopakCode: false, hasDipTest: true,
@@ -41,7 +41,7 @@ export const MOCK_SELLS: SellListing[] = [
   {
     id: "SELL-0022", anonymousId: "SELL-0022",
     region: "KwaZulu-Natal", storageType: "Own Depot",
-    volumeLitres: 2_000_000, minVolumeLitres: 1_000_000,
+    volumeLitres: 3_000_000, minVolumeLitres: 1_000_000,
     pricePerLitre: 24.80, dealPeriod: "Within 7 days",
     dealMethod: "CoC",
     status: "pending", hasVopakCode: false, hasDipTest: false,
@@ -50,7 +50,7 @@ export const MOCK_SELLS: SellListing[] = [
   {
     id: "SELL-0018", anonymousId: "SELL-0018",
     region: "Gauteng", storageType: "Own Depot",
-    volumeLitres: 1_000_000, minVolumeLitres: 1_000_000,
+    volumeLitres: 5_000_000, minVolumeLitres: 1_000_000,
     pricePerLitre: 24.95, dealPeriod: "Negotiable",
     dealMethod: "CoC",
     status: "pending", hasVopakCode: false, hasDipTest: false,
@@ -62,7 +62,7 @@ export const MOCK_BUYS: BuyListing[] = [
   {
     id: "BUY-0087", anonymousId: "BUY-0087",
     region: "Gauteng", deliveryRegion: "Gauteng",
-    volumeLitres: 3_000_000, pricePerLitre: 23.80,
+    volumeLitres: 10_000_000, pricePerLitre: 23.80,
     dealPeriod: "Q2 2026", dealMethod: "CoC",
     status: "verified",
     createdAt: "2026-05-16T09:14:00Z", referralCode: "REF-0087",
@@ -70,7 +70,7 @@ export const MOCK_BUYS: BuyListing[] = [
   {
     id: "BUY-0081", anonymousId: "BUY-0081",
     region: "Western Cape", deliveryRegion: "Western Cape",
-    volumeLitres: 1_000_000, pricePerLitre: 23.65,
+    volumeLitres: 5_000_000, pricePerLitre: 23.65,
     dealPeriod: "Spot (immediate)", dealMethod: "In-Tank Transfer",
     status: "verified",
     createdAt: "2026-05-15T13:30:00Z",
@@ -78,7 +78,7 @@ export const MOCK_BUYS: BuyListing[] = [
   {
     id: "BUY-0074", anonymousId: "BUY-0074",
     region: "KwaZulu-Natal", deliveryRegion: "KwaZulu-Natal",
-    volumeLitres: 2_000_000, pricePerLitre: 23.50,
+    volumeLitres: 20_000_000, pricePerLitre: 23.50,
     dealPeriod: "Within 30 days", dealMethod: "CoC",
     status: "verified",
     createdAt: "2026-05-14T10:00:00Z", referralCode: "REF-0074",
